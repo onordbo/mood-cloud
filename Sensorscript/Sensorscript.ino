@@ -25,7 +25,8 @@ void loop(){
       Serial.println("Motion ended!");
       // We only want to print on the output change, not state
       pirState = LOW;
-  }
+      //Branch  
+    }
   }
 }
 
