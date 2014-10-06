@@ -14,7 +14,7 @@ void loop(){
   if (signal == HIGH) {            // check if the input is HIGH
     digitalWrite(ledPin, HIGH);  // turn light ON
     if (pirState == LOW) {     // we have just turned on
-      Serial.println("DICKS");
+      Serial.println("Active");
       // We only want to print on the output change, not state
       pirState = HIGH;
     }
@@ -24,7 +24,7 @@ void loop(){
 
     if (pirState == HIGH){
       // we have just turned of
-      Serial.println("NO DICKS");
+      Serial.println("Inactive");
       // We only want to print on the output change, not state
       pirState = LOW;
     }
