@@ -2,7 +2,7 @@ int ledRed = 6;
 int ledGreen = 8;
 int ledYellow = 9;
 int ledBlack = 13;
-int ledPin = 13;             // choose the pin for the light
+int ledPin = 13;                // choose the pin for the light
 int inputPin = 2;               // choose the input pin (for PIR sensor)
 int pirState = LOW;             // we start, assuming no motion detected
 int signal = 0;                 // variable for reading the pin status
@@ -32,18 +32,16 @@ void loop() {
     digitalWrite(ledPin, LOW); // turn light OFF
 
     if (pirState == HIGH){
-      // we have just turned of
-      Serial.println("no dicks");
-      // We only want to print on the output change, not state
-      pirState = LOW;
-  digitalWrite(ledRed, random(2));
-  digitalWrite(ledGreen, random(2));
-  digitalWrite(ledYellow, random(2));
-  digitalWrite(ledBlack, random(2));
-  delay(100);
-
+        // we have just turned of
+        Serial.println("no dicks");
+        // We only want to print on the output change, not state
+        pirState = LOW;
+        digitalWrite(ledRed, random(2));
+        digitalWrite(ledGreen, random(2));
+        digitalWrite(ledYellow, random(2));
+        digitalWrite(ledBlack, random(2));
+        delay(100);
+      }
     }
   }
 }
-  
- }
