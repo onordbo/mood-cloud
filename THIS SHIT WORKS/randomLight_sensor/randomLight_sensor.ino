@@ -5,10 +5,10 @@ int ledYellow = 9;
 int ledBlack = 13;
 
 //Sensor variables
-int ledPin = 13;                // choose the pin for the light
-int inputPin = 2;               // choose the input pin (for PIR sensor)
-int pirState = LOW;             // we start, assuming no motion detected
-int signal = 0;                 // variable for reading the pin status
+int ledPin = 13;                 // choose the pin for the light
+int inputPin = 2;                // choose the input pin (for PIR sensor)
+int pirState = LOW;              // we start, assuming no motion detected
+int signal = 0;                  // variable for reading the pin status
 
 void setup() {
   pinMode (ledRed, OUTPUT);
