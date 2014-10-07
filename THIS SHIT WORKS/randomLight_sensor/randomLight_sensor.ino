@@ -1,7 +1,10 @@
+//LED Variables
 int ledRed = 6;
 int ledGreen = 8;
 int ledYellow = 9;
 int ledBlack = 13;
+
+//Sensor variables
 int ledPin = 13;                // choose the pin for the light
 int inputPin = 2;               // choose the input pin (for PIR sensor)
 int pirState = LOW;             // we start, assuming no motion detected
@@ -20,21 +23,16 @@ void setup() {
 }
 
 void loop() {
-   signal = digitalRead(inputPin);  // read input value
-<<<<<<< HEAD
-  if (signal == HIGH) {             // check if the input is HIGH
-    digitalWrite(ledPin, HIGH);     // turn light ON
-    if (pirState == LOW) {          // we have just turned on
-      Serial.println("dicks");
-=======
-  if (signal == HIGH) {            // check if the input is HIGH
-    digitalWrite(ledPin, HIGH);  // turn light ON
-    if (pirState == LOW) {     // we have just turned on
+   signal = digitalRead(inputPin);   // read input value
+
+    if (signal == HIGH) {            // check if the input is HIGH
+      digitalWrite(ledPin, HIGH);    // turn light ON
+    if (pirState == LOW) {           // we have just turned on
       Serial.println("Motion");
->>>>>>> 7b831231690a888196947b2141edb7f01e99cb9f
       // We only want to print on the output change, not state
       pirState = HIGH;
-        } else {
+
+    } else {
 
     digitalWrite(ledPin, LOW); // turn light OFF
 
