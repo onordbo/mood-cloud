@@ -1,4 +1,4 @@
-//LED variables
+//LED variables, designating pin lights
 int ledRed = 6;
 int ledGreen = 8;
 int ledYellow = 9;
@@ -25,12 +25,7 @@ void loop() {
     digitalWrite(ledPin, HIGH);      // Turn ON the light
     if (pirState == LOW) {           // we have just turned on
       Serial.println("Motion");
-      // Randomized blinking
-      digitalWrite(ledRed, random(2));
-      digitalWrite(ledGreen, random(2));
-      digitalWrite(ledYellow, random(2));
-      digitalWrite(ledBlack, random(2));
-      delay(100);
+      // We only want to print on the output change, not state
       pirState = HIGH;
     } else {
       digitalWrite(ledPin, LOW); // turn light OFF
@@ -39,6 +34,11 @@ void loop() {
         Serial.println("No motion");
         // We only want to print on the output change, not state
         pirState = LOW;
+        digitalWrite(ledRed, random(2));
+        digitalWrite(ledGreen, random(2));
+        digitalWrite(ledYellow, random(2));
+        digitalWrite(ledBlack, random(2));
+        delay(100);
       }
     }
   }
