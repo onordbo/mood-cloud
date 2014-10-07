@@ -12,26 +12,23 @@ void setup() {
   pinMode (ledGreen, OUTPUT);
   pinMode (ledYellow, OUTPUT);
   pinMode (ledBlack, OUTPUT);
-  pinMode(ledRed, INPUT);     // declare sensor as input
-  pinMode(ledGreen, INPUT);     // declare sensor as input
-  pinMode(ledYellow, INPUT);     // declare sensor as input
-  pinMode(ledBlack, INPUT);     // declare sensor as input
   Serial.begin(9600);
 }
 
 void loop() {
-   signal = digitalRead(inputPin);  // read input value
+  signal = digitalRead(inputPin);  // read input value
   if (signal == HIGH) {            // check if the input is HIGH
     digitalWrite(ledPin, HIGH);  // turn light ON
     if (pirState == LOW) {     // we have just turned on
       Serial.println("Motion");
       // We only want to print on the output change, not state
       pirState = HIGH;
-        } else {
+    } 
+    else {
 
-    digitalWrite(ledPin, LOW); // turn light OFF
+      digitalWrite(ledPin, LOW); // turn light OFF
 
-    if (pirState == HIGH){
+      if (pirState == HIGH){
         // we have just turned of
         Serial.println("no motion");
         // We only want to print on the output change, not state
@@ -45,3 +42,4 @@ void loop() {
     }
   }
 }
+
