@@ -35,6 +35,7 @@ void loop() {
         digitalWrite(ledYellow, random(2));
         digitalWrite(ledBlack, random(2));
         delay(100);
+        digitalWrite(pirState, LOW);
       }
     }
   }
