@@ -21,10 +21,17 @@ void setup() {
 
 void loop() {
    signal = digitalRead(inputPin);  // read input value
+<<<<<<< HEAD
   if (signal == HIGH) {             // check if the input is HIGH
     digitalWrite(ledPin, HIGH);     // turn light ON
     if (pirState == LOW) {          // we have just turned on
       Serial.println("dicks");
+=======
+  if (signal == HIGH) {            // check if the input is HIGH
+    digitalWrite(ledPin, HIGH);  // turn light ON
+    if (pirState == LOW) {     // we have just turned on
+      Serial.println("Motion");
+>>>>>>> 7b831231690a888196947b2141edb7f01e99cb9f
       // We only want to print on the output change, not state
       pirState = HIGH;
         } else {
@@ -33,7 +40,7 @@ void loop() {
 
     if (pirState == HIGH){
         // we have just turned of
-        Serial.println("no dicks");
+        Serial.println("no motion");
         // We only want to print on the output change, not state
         pirState = LOW;
         digitalWrite(ledRed, random(2));
