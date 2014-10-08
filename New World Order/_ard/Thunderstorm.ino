@@ -2,7 +2,7 @@
 *    Thundercloud, built by Group 1 @ Hyper Island, Karlskrona during the Exploring Tech module
 *
 *    Group members:
-*    Katie Lindstrom   //  @katie
+*    Katie Lindstrom   //  @katiee
 *    Anas Kadhim       //  @anas
 *    Mikaél Finer      //  @micke
 *    Øyvind Nordbø     //  @onordbo
