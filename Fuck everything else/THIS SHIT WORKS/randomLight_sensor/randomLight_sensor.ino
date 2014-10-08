@@ -1,9 +1,8 @@
-//LED variables, designating pin lights
+//Pin variables
 int ledRed = 6;
 int ledGreen = 8;
 int ledYellow = 9;
 int ledBlack = 13;
-
 int inputPin = 2;               // choose the input pin (for PIR sensor)
 
 //Designate LED states
