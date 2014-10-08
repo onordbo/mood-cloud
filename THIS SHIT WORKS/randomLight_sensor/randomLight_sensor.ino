@@ -5,10 +5,11 @@ int ledYellow = 9;
 int ledBlack = 13;
 int ledPin = 13;                // choose the pin for the light
 
+<<<<<<< HEAD
 //Sensor variables
+=======
+>>>>>>> 57d18cc9985cb1d4260fcffcfff57320ec258e7c
 int inputPin = 2;               // choose the input pin (for PIR sensor)
-int pirState = LOW;             // we start, assuming no motion detected
-int signal = 0;                 // variable for reading the pin status
 
 //Designate LED states
 void setup() {
@@ -16,6 +17,7 @@ void setup() {
   pinMode (ledGreen, OUTPUT);
   pinMode (ledYellow, OUTPUT);
   pinMode (ledBlack, OUTPUT);
+<<<<<<< HEAD
    Serial.begin(9600);
   
 }
@@ -43,13 +45,26 @@ void loop() {
   signal = digitalRead(inputPin);     // read input value
   if (signal == HIGH) {               // Check if the input state is HIGH
     if (pirState == HIGH) {           // We have just turned it on
+=======
+  pinMode (inputPin, INPUT);  //If we dont define pin's mode this pin electrically will be different see digitalPins reference
+
+  digitalWrite(ledRed, LOW);  // Turn off leds first start
+  digitalWrite(ledGreen, LOW);
+  digitalWrite(ledYellow, LOW);
+  digitalWrite(ledBlack, LOW);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (digitalRead(inputPin) == HIGH) {  // You can combine digitalRead with if statement
+>>>>>>> 57d18cc9985cb1d4260fcffcfff57320ec258e7c
       Serial.println("Motion");
-      pirState = LOW;
       digitalWrite(ledRed, random(1));
       digitalWrite(ledGreen, random(1));
       digitalWrite(ledYellow, random(1));
       digitalWrite(ledBlack, random(1));
       delay(100);
+<<<<<<< HEAD
     } else {
       Serial.println("No motion");
       digitalWrite(ledRed, 0);
@@ -60,5 +75,12 @@ void loop() {
 >>>>>>> fc703c4274da428b40b4265fbfe4a2b8e68c83e1
     }
   }
+=======
+      digitalWrite(ledRed, LOW);
+      digitalWrite(ledGreen, LOW);
+      digitalWrite(ledYellow, LOW);
+      digitalWrite(ledBlack, LOW);
+      }
+>>>>>>> 57d18cc9985cb1d4260fcffcfff57320ec258e7c
 }
 
