@@ -49,9 +49,10 @@ void setup() {
 
   //Set PIR Sensor pin to input
   //TODO: Setup PIR Sensor
+
 }
 
-//Continious code
+//Infinitely running code
 void loop() {
 
   //Led 1
