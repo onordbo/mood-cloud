@@ -15,12 +15,15 @@
 *    LOW  = Light off
 *
 *
-*    //Template for a light flicker
+*    //Example light flicker
+*
+*    //Set delay controller
+*    int ledOne_delay = 50;
 *
 *    digitalWrite(8, HIGH);    // Turn the LED on
-*    delay(1000);              // Wait for a given period
+*    delay(ledOne_delay);      // Wait for a set period, assigned by the delay controller variable
 *    digitalWrite(8, LOW);     // Turn the LED off
-*    delay(1000);              // Wait for a given period
+*    delay(ledOne_delay);      // Wait for a given period, assigned by the delay controller variable
 *
 */
 
