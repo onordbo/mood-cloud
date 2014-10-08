@@ -1,0 +1,90 @@
+/*
+*    Thundercloud, built by Group 1 @ Hyper Island, Karlskrona during the Exploring Tech module
+*
+*    Group members:
+*    Katie Lindstrom   //  @katie
+*    Anas Kadhim       //  @anas
+*    Mikaél Finer      //  @micke
+*    Øyvind Nordbø     //  @onordbo
+*
+*    How to flicker a light
+*    ======================
+*    Light states:
+*
+*    HIGH = Light on
+*    LOW  = Light off
+*
+*
+*    //Template for a light flicker
+*
+*    digitalWrite(8, HIGH);    // Turn the LED on
+*    delay(1000);              // Wait for a given period
+*    digitalWrite(8, LOW);     // Turn the LED off
+*    delay(1000);              // Wait for a given period
+*
+*/
+
+
+//Delay controllers
+int ledOne_delay = 50;
+int ledTwo_delay = 150;
+int ledThree_delay = 80;
+int ledFour_delay = 30;
+int ledFive_delay = 120;
+int ledSix_delay = 50;
+
+//Initial setup
+void setup() {
+
+  // Set LED pins to output
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+
+  //Set PIR Sensor pin to input
+  //TODO: Setup PIR Sensor
+}
+
+//Continious code
+void loop() {
+
+  //Led 1
+  digitalWrite(8, HIGH);
+  delay(ledOne_delay);
+  digitalWrite(8, LOW);
+  delay(ledOne_delay);
+
+  //Led 2
+  digitalWrite(9, HIGH);
+  delay(ledTwo_delay);
+  digitalWrite(9, LOW);
+  delay(ledTwo_delay);
+
+  //Led 3
+  digitalWrite(10, HIGH);
+  delay(ledThree_delay);
+  digitalWrite(10, LOW);
+  delay(ledThree_delay);
+
+  //Led 4
+  digitalWrite(11, HIGH);
+  delay(ledFour_delay);
+  digitalWrite(11, LOW);
+  delay(ledFour_delay);
+
+  //Led 5
+  digitalWrite(12, HIGH);
+  delay(ledFive_delay);
+  digitalWrite(12, LOW);
+  delay(ledFive_delay);
+
+  //Led 6
+  digitalWrite(13, HIGH);
+  delay(ledSix_delay);
+  digitalWrite(13, LOW);
+  delay(ledSix_delay);
+
+}
