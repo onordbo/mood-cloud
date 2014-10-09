@@ -1,10 +1,12 @@
 //Pin declaration for LEDs
-int ledOne   = 7;
-int ledTwo   = 8;
-int ledThree = 9;
-int ledFour  = 10;
-int ledFive  = 11;
-int ledSix   = 12;
+int ledOne   = 5;
+int ledTwo   = 6;
+int ledThree = 7;
+int ledFour  = 8;
+int ledFive  = 9;
+int ledSix   = 10;
+int ledSeven = 11;
+int ledEight = 12;
 
 //Pin declaration for the PIR Sensor
 int sensorPin = 13;
@@ -16,7 +18,10 @@ int ledThree_delay = 400;
 int ledFour_delay = 50;
 int ledFive_delay = 80;
 int ledSix_delay = 180;
+int ledSeven_delay = 180;
+int ledEight_delay = 180;
 
+//Initialization
 void setup() {
 
   // Set LED pins to output
@@ -26,6 +31,8 @@ void setup() {
   pinMode(ledFour,  OUTPUT);
   pinMode(ledFive,  OUTPUT);
   pinMode(ledSix,   OUTPUT);
+  pinMode(ledSeven, OUTPUT);
+  pinMode(ledEight, OUTPUT);
 
   //Set PIR Sensor pin to input
   pinMode(sensorPin, INPUT);
@@ -35,12 +42,14 @@ void setup() {
 
 }
 
+//Concurrent code
 void loop(){
 
   int sensor = digitalRead(sensorPin); // read input value
   if (sensor == HIGH) // Check for motion (HIGH)
   {
     Serial.println('Motion');
+
     //Led 1
     digitalWrite(ledOne, HIGH);
     delay(ledOne_delay);
@@ -76,6 +85,18 @@ void loop(){
     delay(ledSix_delay);
     digitalWrite(ledSix, LOW);
     delay(ledSix_delay);
+
+    //Led 7
+    digitalWrite(ledSeven, HIGH);
+    delay(ledSeven_delay);
+    digitalWrite(ledSeven, LOW);
+    delay(ledSeven_delay);
+
+    //Led 8
+    digitalWrite(ledEight, HIGH);
+    delay(ledSeven_delay);
+    digitalWrite(ledEight, LOW);
+    delay(ledSeven_delay);
 
   } else {
     Serial.println('BECAUSE, REASONS');
