@@ -29,26 +29,29 @@
 
 
 //Delay controllers
-int ledOne_delay = 40;
-int ledTwo_delay = 60;
-int ledThree_delay = 450;
+int ledOne_delay = 50;
+int ledTwo_delay = 100;
+int ledThree_delay = 400;
 int ledFour_delay = 50;
-int ledFive_delay = 320;
-int ledSix_delay = 50;
+int ledFive_delay = 80;
+int ledSix_delay = 180;
+
+//Sensor pin
+int sensorPin = 12;
 
 //Initial setup
 void setup() {
 
   // Set LED pins to output
+  pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
   pinMode(12, OUTPUT);
-  pinMode(13, OUTPUT);
 
   //Set PIR Sensor pin to input
-  //TODO: Setup PIR Sensor
+  pinMode(sensorPin, INPUT);
 
 }
 
@@ -56,39 +59,39 @@ void setup() {
 void loop() {
 
   //Led 1
-  digitalWrite(8, HIGH);
+  digitalWrite(7, HIGH);
   delay(ledOne_delay);
-  digitalWrite(8, LOW);
+  digitalWrite(7, LOW);
   delay(ledOne_delay);
 
   //Led 2
-  digitalWrite(9, HIGH);
+  digitalWrite(8, HIGH);
   delay(ledTwo_delay);
-  digitalWrite(9, LOW);
+  digitalWrite(8, LOW);
   delay(ledTwo_delay);
 
   //Led 3
-  digitalWrite(10, HIGH);
+  digitalWrite(9, HIGH);
   delay(ledThree_delay);
-  digitalWrite(10, LOW);
+  digitalWrite(9, LOW);
   delay(ledThree_delay);
 
   //Led 4
-  digitalWrite(11, HIGH);
+  digitalWrite(10, HIGH);
   delay(ledFour_delay);
-  digitalWrite(11, LOW);
+  digitalWrite(10, LOW);
   delay(ledFour_delay);
 
   //Led 5
-  digitalWrite(12, HIGH);
+  digitalWrite(11, HIGH);
   delay(ledFive_delay);
-  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
   delay(ledFive_delay);
 
   //Led 6
-  digitalWrite(13, HIGH);
+  digitalWrite(12, HIGH);
   delay(ledSix_delay);
-  digitalWrite(13, LOW);
+  digitalWrite(12, LOW);
   delay(ledSix_delay);
 
 }
