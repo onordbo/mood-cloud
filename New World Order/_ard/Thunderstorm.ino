@@ -4,7 +4,7 @@
 *    Group members:
 *    Katie Lindstrom   //  @katiee
 *    Anas Kadhim       //  @anas
-*    Mikaél Finer      //  @micke
+*    Mikaél Finer      //  @mikaelfiner
 *    Øyvind Nordbø     //  @onordbo
 *
 *    How to flicker a light
@@ -29,11 +29,11 @@
 
 
 //Delay controllers
-int ledOne_delay = 50;
-int ledTwo_delay = 150;
-int ledThree_delay = 80;
-int ledFour_delay = 30;
-int ledFive_delay = 120;
+int ledOne_delay = 40;
+int ledTwo_delay = 60;
+int ledThree_delay = 450;
+int ledFour_delay = 50;
+int ledFive_delay = 320;
 int ledSix_delay = 50;
 
 //Initial setup
