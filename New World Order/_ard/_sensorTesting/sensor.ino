@@ -42,54 +42,41 @@ void loop(){
   {
     Serial.println('Motion');
     //Led 1
-    digitalWrite(7, HIGH);
+    digitalWrite(ledOne, HIGH);
     delay(ledOne_delay);
-    digitalWrite(7, LOW);
+    digitalWrite(ledOne, LOW);
     delay(ledOne_delay);
 
     //Led 2
-    digitalWrite(8, HIGH);
+    digitalWrite(ledTwo, HIGH);
     delay(ledTwo_delay);
-    digitalWrite(8, LOW);
+    digitalWrite(ledTwo, LOW);
     delay(ledTwo_delay);
 
     //Led 3
-    digitalWrite(9, HIGH);
+    digitalWrite(ledThree, HIGH);
     delay(ledThree_delay);
-    digitalWrite(9, LOW);
+    digitalWrite(ledThree, LOW);
     delay(ledThree_delay);
 
     //Led 4
-    digitalWrite(10, HIGH);
+    digitalWrite(ledFour, HIGH);
     delay(ledFour_delay);
-    digitalWrite(10, LOW);
+    digitalWrite(ledFour, LOW);
     delay(ledFour_delay);
 
     //Led 5
-    digitalWrite(11, HIGH);
+    digitalWrite(ledFive, HIGH);
     delay(ledFive_delay);
-    digitalWrite(11, LOW);
+    digitalWrite(ledFive, LOW);
     delay(ledFive_delay);
 
     //Led 6
-    digitalWrite(12, HIGH);
+    digitalWrite(ledSix, HIGH);
     delay(ledSix_delay);
-    digitalWrite(12, LOW);
+    digitalWrite(ledSix, LOW);
     delay(ledSix_delay);
   } else {
-
-    digitalWrite(ledOne,   LOW);
-    digitalWrite(ledTwo,   LOW);
-    digitalWrite(ledThree, LOW);
-    digitalWrite(ledFour,  LOW);
-    digitalWrite(ledFive,  LOW);
-    digitalWrite(ledSix,   LOW);
-
-    if (pirState == HIGH){
-      // we have just turned of
-      Serial.println("Inactive");
-      // We only want to print on the output change, not state
-      pirState = LOW;
-    }
+    //Do nothing
   }
 }
