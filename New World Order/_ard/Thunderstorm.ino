@@ -24,9 +24,9 @@
 *    int ledOne_delay = 50;
 *
 *    digitalWrite(ledOne, HIGH);    // Turn the LED on
-*    delay(ledOne_delay);      // Wait for a set period, assigned by the delay controller variable
+*    delay(ledOne_delay);           // Wait for a set period, assigned by the delay controller variable
 *    digitalWrite(ledOne, LOW);     // Turn the LED off
-*    delay(ledOne_delay);      // Wait for a given period, assigned by the delay controller variable
+*    delay(ledOne_delay);           // Wait for a given period, assigned by the delay controller variable
 *
 */
 
