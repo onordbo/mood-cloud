@@ -5,7 +5,7 @@ int signal = 0;                 // variable for reading the pin status
 
 
 void setup() {
-  pinMode(ledPin, OUTPUT);   // declare LED as output
+  pinMode(ledPin, OUTPUT);      // declare LED as output
   pinMode(inputPin, INPUT);     // declare sensor as input
   Serial.begin(9600);
 }

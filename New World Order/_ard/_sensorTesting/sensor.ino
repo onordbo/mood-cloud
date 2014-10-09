@@ -41,6 +41,7 @@ void loop(){
   if (sensor == HIGH) // Check for motion (HIGH)
   {
     Serial.println('Motion');
+
     //Led 1
     digitalWrite(ledOne, HIGH);
     delay(ledOne_delay);

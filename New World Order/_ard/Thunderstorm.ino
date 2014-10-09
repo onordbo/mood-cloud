@@ -1,3 +1,35 @@
+/*
+*    Thundercloud, built by Group 1 @ Hyper Island, Karlskrona during the Exploring Tech module
+*
+*    Group members:
+*    Katie Lindstrom   //  @katiee
+*    Anas Kadhim       //  @anas
+*    Mikaél Finer      //  @mikaelfiner
+*    Øyvind Nordbø     //  @onordbo
+*
+*    How to flicker a light
+*    ======================
+*    Light states:
+*
+*    HIGH = Light on
+*    LOW  = Light off
+*
+*
+*    //Example light flicker
+*
+*    //Declare LED pin
+*    int ledOne = 5;
+*
+*    //Set delay controller
+*    int ledOne_delay = 50;
+*
+*    digitalWrite(ledOne, HIGH);    // Turn the LED on
+*    delay(ledOne_delay);      // Wait for a set period, assigned by the delay controller variable
+*    digitalWrite(ledOne, LOW);     // Turn the LED off
+*    delay(ledOne_delay);      // Wait for a given period, assigned by the delay controller variable
+*
+*/
+
 //Pin declaration for LEDs
 int ledOne   = 5;
 int ledTwo   = 6;
