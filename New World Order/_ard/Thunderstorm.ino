@@ -1,32 +1,15 @@
-/*
-*    Thundercloud, built by Group 1 @ Hyper Island, Karlskrona during the Exploring Tech module
-*
-*    Group members:
-*    Katie Lindstrom   //  @katiee
-*    Anas Kadhim       //  @anas
-*    Mikaél Finer      //  @mikaelfiner
-*    Øyvind Nordbø     //  @onordbo
-*
-*    How to flicker a light
-*    ======================
-*    Light states:
-*
-*    HIGH = Light on
-*    LOW  = Light off
-*
-*
-*    //Example light flicker
-*
-*    //Set delay controller
-*    int ledOne_delay = 50;
-*
-*    digitalWrite(8, HIGH);    // Turn the LED on
-*    delay(ledOne_delay);      // Wait for a set period, assigned by the delay controller variable
-*    digitalWrite(8, LOW);     // Turn the LED off
-*    delay(ledOne_delay);      // Wait for a given period, assigned by the delay controller variable
-*
-*/
+//Pin declaration for LEDs
+int ledOne   = 5;
+int ledTwo   = 6;
+int ledThree = 7;
+int ledFour  = 8;
+int ledFive  = 9;
+int ledSix   = 10;
+int ledSeven = 11;
+int ledEight = 12;
 
+//Pin declaration for the PIR Sensor
+int sensorPin = 13;
 
 //Delay controllers
 int ledOne_delay = 50;
@@ -35,63 +18,87 @@ int ledThree_delay = 400;
 int ledFour_delay = 50;
 int ledFive_delay = 80;
 int ledSix_delay = 180;
+int ledSeven_delay = 180;
+int ledEight_delay = 180;
 
-//Sensor pin
-int sensorPin = 12;
-
-//Initial setup
+//Initialization
 void setup() {
 
   // Set LED pins to output
-  pinMode(7, OUTPUT);
-  pinMode(8, OUTPUT);
-  pinMode(9, OUTPUT);
-  pinMode(10, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
+  pinMode(ledOne,   OUTPUT);
+  pinMode(ledTwo,   OUTPUT);
+  pinMode(ledThree, OUTPUT);
+  pinMode(ledFour,  OUTPUT);
+  pinMode(ledFive,  OUTPUT);
+  pinMode(ledSix,   OUTPUT);
+  pinMode(ledSeven, OUTPUT);
+  pinMode(ledEight, OUTPUT);
 
   //Set PIR Sensor pin to input
   pinMode(sensorPin, INPUT);
 
+  //Initialize serial connection
+  Serial.begin(9600);
+
 }
 
-//Infinitely running code
-void loop() {
+//Concurrent code
+void loop(){
 
-  //Led 1
-  digitalWrite(7, HIGH);
-  delay(ledOne_delay);
-  digitalWrite(7, LOW);
-  delay(ledOne_delay);
+  int sensor = digitalRead(sensorPin); // read input value
+  if (sensor == HIGH) // Check for motion (HIGH)
+  {
+    Serial.println('Motion');
 
-  //Led 2
-  digitalWrite(8, HIGH);
-  delay(ledTwo_delay);
-  digitalWrite(8, LOW);
-  delay(ledTwo_delay);
+    //Led 1
+    digitalWrite(ledOne, HIGH);
+    delay(ledOne_delay);
+    digitalWrite(ledOne, LOW);
+    delay(ledOne_delay);
 
-  //Led 3
-  digitalWrite(9, HIGH);
-  delay(ledThree_delay);
-  digitalWrite(9, LOW);
-  delay(ledThree_delay);
+    //Led 2
+    digitalWrite(ledTwo, HIGH);
+    delay(ledTwo_delay);
+    digitalWrite(ledTwo, LOW);
+    delay(ledTwo_delay);
 
-  //Led 4
-  digitalWrite(10, HIGH);
-  delay(ledFour_delay);
-  digitalWrite(10, LOW);
-  delay(ledFour_delay);
+    //Led 3
+    digitalWrite(ledThree, HIGH);
+    delay(ledThree_delay);
+    digitalWrite(ledThree, LOW);
+    delay(ledThree_delay);
 
-  //Led 5
-  digitalWrite(11, HIGH);
-  delay(ledFive_delay);
-  digitalWrite(11, LOW);
-  delay(ledFive_delay);
+    //Led 4
+    digitalWrite(ledFour, HIGH);
+    delay(ledFour_delay);
+    digitalWrite(ledFour, LOW);
+    delay(ledFour_delay);
 
-  //Led 6
-  digitalWrite(12, HIGH);
-  delay(ledSix_delay);
-  digitalWrite(12, LOW);
-  delay(ledSix_delay);
+    //Led 5
+    digitalWrite(ledFive, HIGH);
+    delay(ledFive_delay);
+    digitalWrite(ledFive, LOW);
+    delay(ledFive_delay);
 
+    //Led 6
+    digitalWrite(ledSix, HIGH);
+    delay(ledSix_delay);
+    digitalWrite(ledSix, LOW);
+    delay(ledSix_delay);
+
+    //Led 7
+    digitalWrite(ledSeven, HIGH);
+    delay(ledSeven_delay);
+    digitalWrite(ledSeven, LOW);
+    delay(ledSeven_delay);
+
+    //Led 8
+    digitalWrite(ledEight, HIGH);
+    delay(ledSeven_delay);
+    digitalWrite(ledEight, LOW);
+    delay(ledSeven_delay);
+
+  } else {
+    Serial.println('BECAUSE, REASONS');
+  }
 }
