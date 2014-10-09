@@ -126,9 +126,9 @@ void loop(){
 
     //Led 8
     digitalWrite(ledEight, HIGH);
-    delay(ledSeven_delay);
+    delay(ledEight_delay);
     digitalWrite(ledEight, LOW);
-    delay(ledSeven_delay);
+    delay(ledEight_delay);
 
   } else {
     Serial.println('BECAUSE, REASONS');
