@@ -1,3 +1,11 @@
+//Led variables
+int ledOne   = 7;
+int ledTwo   = 8;
+int ledThree = 9;
+int ledFour  = 10;
+int ledFive  = 11;
+int ledSix   = 12;
+
 //Delay controllers
 int ledOne_delay = 50;
 int ledTwo_delay = 100;
@@ -12,12 +20,12 @@ int sensorPin = 13;
 void setup() {
 
   // Set LED pins to output
-  pinMode(7, OUTPUT);
-  pinMode(8, OUTPUT);
-  pinMode(9, OUTPUT);
-  pinMode(10, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
+  pinMode(ledOne,   OUTPUT);
+  pinMode(ledTwo,   OUTPUT);
+  pinMode(ledThree, OUTPUT);
+  pinMode(ledFour,  OUTPUT);
+  pinMode(ledFive,  OUTPUT);
+  pinMode(ledSix,   OUTPUT);
 
   //Set PIR Sensor pin to input
   pinMode(sensorPin, INPUT);
@@ -69,6 +77,19 @@ void loop(){
     digitalWrite(12, LOW);
     delay(ledSix_delay);
   } else {
-    Serial.println('Motion ended');
+
+    digitalWrite(ledOne,   LOW);
+    digitalWrite(ledTwo,   LOW);
+    digitalWrite(ledThree, LOW);
+    digitalWrite(ledFour,  LOW);
+    digitalWrite(ledFive,  LOW);
+    digitalWrite(ledSix,   LOW);
+
+    if (pirState == HIGH){
+      // we have just turned of
+      Serial.println("Inactive");
+      // We only want to print on the output change, not state
+      pirState = LOW;
+    }
   }
 }
