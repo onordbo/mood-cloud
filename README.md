@@ -1,6 +1,3 @@
-mood-cloud
-==========
-
 # Exploring Tech Module @ Hyper Island
 
 We got a month to play around with random cool tech stuff at Hyper Island. What we eventually ended up with was a puffy thundercloud. The technology inside the cloud is a bunch of LED's, hooked up to an Arduino, check out the code to see how I simulated the thunder!
