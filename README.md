@@ -7,7 +7,7 @@ Video from the exhibition:
 
 Check out the project webpage to read even more:
 
-[Project website](http://thundercloud.se)
+[Project page - thundercloud.se](http://thundercloud.se)
 
 Video and Website, built by Anas Kadhim
 
