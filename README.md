@@ -6,7 +6,9 @@ Video from the exhibition:
 [Thundercloud on Vimeo](https://vimeo.com/110234422)
 
 Check out the project webpage to read even more:
+
 [Project website](http://thundercloud.se)
+
 Video and Website, built by Anas Kadhim
 
 # Team & Roles
